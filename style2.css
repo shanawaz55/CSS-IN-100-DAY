@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&family=Secular+One&display=swap');
+body{
+    color: blanchedalmond;
+font-family: 'Nunito', sans-serif;
+}
+.container{
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 70vh;
+}
+.head,.subheading{
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    font-family: 'Secular One', sans-serif;
+    
+}
+.head{
+    font-size: larger;
+}
+ul{
+    align-items: center;
+    list-style: none;
+    padding-bottom: 3vh;
+}
+ul li{
+    margin: 20px auto;
+
+}
+input{
+    float: right;
+    margin-right: 40px;
+}
+
+/* https://css-tricks.com/examples/hrs/ */
+hr.style {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: pink;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}

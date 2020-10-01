@@ -1,0 +1,105 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #962d31;
+  color: $blue;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+	position: relative;
+	width: 200px;
+	height: 280px;
+	background: #edf1f2;
+	padding: 10px 30px;
+}
+
+header{
+	text-align: center;	
+}
+
+small{
+	font-weight: normal;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 65%;
+	margin: 25px 0;
+}
+
+section > div{
+	flex: 1;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+label{
+	transition: all 1s ease;
+	position: relative;
+	font-size: 15px;
+}
+
+label .unchecked{
+	position: absolute;
+	left: 180px;
+  width: 15px;
+	height: 15px;
+	border: 1.5px solid $blue;
+	border-radius: 50%;
+	transition: 1s ease;
+}
+
+input:checked ~ label{
+	color: $red;
+	opacity: 0.7;
+}
+
+label .checked:after{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 180px;
+	content: '\2714';
+	color: $red;
+	transform: scale(1.5);
+}
+
+input:checked ~ label .checked{
+	opacity: 1;
+}
+
+input:checked ~ label .unchecked{
+	transform: scale(1.5);
+	opacity: 0;
+}
+
+label .checked{
+	opacity: 0;
+	transition: 1s ease;
+}
+
