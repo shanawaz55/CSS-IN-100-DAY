@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+	
+	<title>MY BULB</title>
+	<P>Press ON button to switch on the light and OFF button to switch off the light </P>
+<script>
+function light(sw) {
+  var pic;
+  
+  if (sw == 0) {
+  	pic = "pic_bulboff.gif"
+  } else {
+    pic = "pic_bulbon.gif"
+  }
+
+    document.getElementById('myImage').src = pic;
+}
+</script>
+
+
+<p>
+<button type="button" onclick="light(1)">ON</button>
+
+<img id="myImage" src="pic_bulboff.gif" width="200" height="300">
+
+<button type="button" onclick="light(0)">OFF</button>
+</p>
+
+</body>
+</html>
